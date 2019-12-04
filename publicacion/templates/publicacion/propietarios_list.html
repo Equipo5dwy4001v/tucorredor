@@ -1,0 +1,52 @@
+{% extends 'publicacion/listados.html' %} 
+
+{% block header %}
+    
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <h4 id="etiquetas">Listado de propietarios</h4>
+</div>
+
+<div class="container">
+    <form class="row" id="formulario">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Rut</th>
+                            <th scope="col">Dv</th>
+                            <th scope="col">Movil</th>
+                            <th scope="col">Fijo</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if propietario %}
+                        {% for p in propietario %}
+                        <tr>
+                            <td>{{ p.nombre }}</td>
+                            <td>{{ p.apellidos }}</td>
+                            <td>{{ p.rut }}</td>
+                            <td>{{ p.dv }}</td>
+                            <td>{{ p.movil }}</td>
+                            <td>{{ p.fijo }}</td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <h4> No Hay registros para mostrar </h4>
+                        {% endif %}
+                    </tbody>
+                </table>
+    
+        <button class="btn btn-secondary"><a class="nav-link efecto-link" id="salir" data-toggle="modal" data-target="#"
+                href="{% url 'bienvenida' %}">Siguente </a>
+        </button>
+
+    </form>
+</div>
+{% endblock %}
+
+

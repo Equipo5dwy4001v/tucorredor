@@ -1,0 +1,59 @@
+{% extends 'publicacion/listados.html' %} 
+
+{% block header %}
+   
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <h4>Listado de Direcciones</h4>
+</div>
+<div class="container">
+    <form class="row" id="formulario">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th id="etiquetas" scope="col">Calle</th>
+                            <th id="etiquetas" scope="col">Numero</th>
+                            <th id="etiquetas" scope="col">Detalle</th>
+                            <th id="etiquetas" scope="col">Comuna</th>
+                            <th id="etiquetas" scope="col">Provincia</th>
+                            <th id="etiquetas" scope="col">Region</th>
+                            <th id="etiquetas" scope="col">Sector</th>
+                            <th id="etiquetas" scope="col">Codigo Postal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- --->
+                        {% if direccion %}
+                        {% for d in direccion %}
+                        <tr>
+                            <td id="etiquetas">{{ d.calle }}</td>
+                            <td id="etiquetas">{{ d.numero }}</td>
+                            <td id="etiquetas">{{ d.detalle }}</td>
+                            <td id="etiquetas">{{ d.comuna }}</td>
+                            <td id="etiquetas">{{ d.provincia }}</td>
+                            <td id="etiquetas">{{ d.region }}</td>
+                            <td id="etiquetas">{{ d.sector }}</td>
+                            <td id="etiquetas">{{ d.codigo_postal }}</td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <h4> No Hay registros para mostrar </h4>
+
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+        <button class="btn btn-success "><a class="nav-link efecto-link" id="salir" data-toggle="modal" data-target="#"
+            href="{% url 'propietario_list' %}">Siguente </a>
+    </button>
+    </form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Nueva Contraseña{% endblock %}
+
+{% block menu %}
+    </br>       
+{% endblock menu %}
+{% block content %} 
+ {% if validlink %}  
+      <form id="formulario" action="" method="POST" class="col-5">
+            {% csrf_token %}    
+            {{ form.new_password1.errors}}  
+            <label for="id_new_password1">Nueva Contraseña:</label>
+            {{ form.new_password1 }} 
+
+            {{ form.new_password2.errors}}  
+            <label for="id_new_password2">Confirme Contraseña:</label>
+            {{ form.new_password2 }} 
+
+            <br>
+            <div class="form-row justify-content-center">
+                  <button value="Cambiar Mi Contraseña" type="submit" class="btn btn-success" name="submit" >Enviar</button>
+            </div>   
+        </form>
+{% else %}
+        <h1> Este Enlace  ya ha sido  utlizado </h1>
+
+{% endif %}
+{% endblock content %}
+{% block  extrafooter %}
+    <br><br><br>
+{% endblock %}
+

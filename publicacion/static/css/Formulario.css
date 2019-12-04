@@ -1,0 +1,62 @@
+* {
+	margin : 0;
+	padding: 0;
+}
+body{
+    background-image: url("../img/interior.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+#etiquetas{
+   color:  white;
+   text-shadow: 2px 2px 2px black;
+ 
+}
+
+#contenido{
+    color: white;
+}
+#salir
+{
+   color: white;
+}
+
+#salir:hover{
+   color: white;
+   text-decoration: underline ;
+}
+
+
+#cabecera{ 
+   color: white;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background: rgba(0,0,255,0.3);
+   box-shadow: 2px 2px 10px #666;
+}
+
+
+#piecera{ 
+   color: white;
+   background: rgba(0,0,255,0.3);
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }
+
+#formulario{
+   margin: 10px;
+   border: 20px;
+   padding: 20px;
+   background-color: rgba(128,128,128,0.7);
+   box-shadow: 2px 2px 10px #666;
+
+}
+
+h4{
+   text-shadow: 2px 2px 2px black;
+}
+h1{
+   text-shadow: 2px 2px 2px white;
+}
+

@@ -1,0 +1,19 @@
+{% extends 'publicacion/base.html' %} {% block content %}
+
+<h1>Galeria</h1><br />
+<h3>Información Inmueble</h3>
+{% for g in galerias %}
+<div>
+    <table width="100%">
+        <tr>
+            <td rowspan="2">
+                <img src="{{ g.contenido.url}}" width="100px" height="100px">
+            </td>
+        </tr>
+        <tr>
+            <td>Nombre: {{ g.inmueble.propietario.nombre }}</td>
+            <td>Apellidos: {{ g.inmueble.propietario.apellidos }}</td>
+        </tr>
+    </table>
+</div>
+{% endfor %} {% endblock %}

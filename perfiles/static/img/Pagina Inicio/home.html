@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!--..l..-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Busqueda</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/PagBusqueda.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    
+
+<body>
+    <div class="container-fluid">
+        <!-- Menu de cabecera-->
+        <header class="row" id="cabecera">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-9">
+                        logo
+                    </div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-light"> <i class="fa fa-user fa-user"></i>
+                                Entrar
+                        </button>
+                        <button type="button" class="btn btn-primary">Publicar Propiedad</button>
+                    </div>
+                </div>        
+            </div>
+        </header>
+        <!-- Buscador -->
+        <nav class="row" id="buscador">   
+                <div class="container justify-content-center">   
+                    <div class="row justify-content-center">
+                        <div class="col-9">
+                            <input class="typeahead form-control" type="text" placeholder="Ingrese Comuna....">
+                        </div>
+                        <div class="col-xs-3 ">
+                            <button class="btn btn-primary form-control" type="submit" id="buscar">
+                                <i class="fas fa-search"></i> Buscar</button>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+         
+        <!-- resultados de Busquedas-->
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="row  busquedas " >
+                        <div class="col-8">
+                            <div class="row">
+                                <h3>Departamentos en Ventas...</h3>
+                            </div>
+                            <div class="row ">
+                                <h4>Cantidad de publicaciones encontradas</h4>
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <button type="button" class="btn btn-primary">Mostrar en Mapa</button>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row" >
+                                <div class="Ordenar">
+                                    <select class="form-control" name=""> 
+                                        <option>Ordena tu Resultado  </option>
+                                        <option>Precio menor a mayor  </option>
+                                        <option>Precio mayor a menor  </option>
+                                        <option>Superficie menor a mayor  </option>
+                                        <option>Superficie mayor a menor  </option>
+                                        <option>Las más antiguas </option>
+                                        <option>Las más nuevas </option>
+                                    </select>
+                                </div> 
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                                       Sólo Fotos
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" >
+                                          Ocultar Publicaciones Gratuitas
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                            <div Class="row">
+                                  Resultados 1 a 25 de 79
+                            </div>
+                         </div>
+                    </div>
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item">
+                            <div class="row ">
+                                <div class="col-12 col-sm-12 col-md-2" >
+                                        <img class="img-fluid" src="img/ImagenHandler.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-1">
+                                        <br>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-5 ">
+                                        <label for=""> Proyecto, Venta, Departamento</label>
+                                        <h5>Condominio San Francisco</h5>
+                                        <h6>Los Viñedos 6412, Puente Alto</h6>
+                                        <h6>Código: 8738</h6>
+                                </div>
+                                <div class="col-sm-2 col-12">
+                                    <label for="">Desde:</label>
+                                        <h6>UF 2.664,00</h6>
+                                    <label for="">Hasta:</label>
+                                        <h6>3.185,00</h6>
+                                </div>
+                                    <div class="col-sm-2 col-12">
+                                        <label for="">Superficie:</label>
+                                        <h6>58,85 - 69,09 m2</h6>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-end text-right">
+                                    <button type="button" class="btn btn-primary">Cotizar</button>
+                                </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row ">
+                                <div class="col-12 col-sm-12 col-md-2 ">
+                                    <img class="img-fluid" src="img/ImagenHandler2.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-1">
+                                    <br>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-5 ">
+                                    <label for=""> Proyecto, Venta, Departamento</label>
+                                    <h5>Vertientes Puente Alto</h5>
+                                    <h6>Av. Canal De La Luz 3810, Puente Alto</h6>
+                                    <h6>Código: 8080</h6>
+                                </div>
+                                <div class="col-sm-2 col-12">
+                                    <label for="">Desde:</label>
+                                    <h6>UF 2.729,00</h6>
+                                    <label for="">Hasta:</label>
+                                    <h6>3.807,00</h6>
+                                </div>
+                                <div class="col-sm-2 col-12">
+                                    <label for="">Superficie:</label>
+                                    <h6>70,64 - 83,57 m2</h6>
+                        
+                                </div>
+                            </div>
+                            <div class="row justify-content-end text-right">
+                                <button type="button" class="btn btn-primary">Cotizar</button>
+                            </div>
+                        </li>
+                            <li class="list-group-item">...</li>
+                            <li class="list-group-item">...</li>
+                            <li class="list-group-item">...</li>
+                        </ul>
+                </div>
+                <div class="col-4" id="allfilter">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="caja">
+                                <select class="form-control">
+                                    <option>Venta</option>
+                                    <option>Arriendo</option>
+                                </select>
+                            </div> 
+                        </div>  
+                    </div>
+                    <div class="row">
+                            <div class="col-12">
+                                <div class="caja">
+                                        <select class="form-control">
+                                          <option>Departamento</option>             </option>
+                                          <option>Casa            </option>
+                                          <option>Oficina</option>
+                                          <option>Sitio</option>
+                                          <option>Comercial</option>
+                                          <option>Industrial</option>
+                                        </select>
+                                </div> 
+                            </div>  
+                    </div>
+                    <div class="row">
+                            <div class="col-12">
+                                <div class="caja">
+                                        <select class="form-control">
+                                          <option>Nuevas y Usadas</option>
+                                          <option>Nuevas</option>
+                                          <option>Usadas</option>
+                                        </select>
+                                </div> 
+                            </div>  
+                    </div>
+                    <br>
+                        <div class="row">
+                                <div class="col-12">
+                                   <label for="">Precios UF:</label>
+                                </div>  
+                        </div>
+                        <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                         <input type="text" class="form-control" id="inputdesde" placeholder="Desde">
+                                    </div>
+                                </div>  
+                                <div class="col-6">
+                                        <div class="form-group">
+                                             <input type="text" class="form-control" id="inputdesde" placeholder="Hasta">
+                                        </div>
+                                </div>  
+                        </div>
+                        
+                        <div class="row">
+                                <div class="col-12">
+                                   <label for="">Superficie en M2:</label>
+                                </div>  
+                        </div>
+                        <div class="row">
+                                <div class="col-3 col-md-3 col-sm-12">
+                                    <div class="form-group">
+                                         <input type="text" class="form-control" id="inputdesde" placeholder="M2">
+                                    </div>
+                                </div>  
+                                <div class="col-4 col-md-4 col-sm-12">
+                                        <div class="form-group">
+                                             <input type="text" class="form-control" id="inputdesde" placeholder="0,00">
+                                        </div>
+                                </div>  
+                                <div class="col-5  col-md-5 col-sm-12">
+                                        <div class="form-group">
+                                             <input type="text" class="form-control" id="inputdesde" placeholder="Hasta">
+                                        </div>
+                                </div>  
+                        </div>
+                        <div class="row">
+                                <div class="col-12">
+                                        Barra de filtros
+                                </div>  
+                        </div>
+                        <div class="row">
+                                <div class="col-12">
+                                        Barra de filtros2
+                                </div>  
+                        </div>
+                        <br>
+                        <div class="row">
+                                <div class="col-12">
+                                       <div class="form-check">
+                                         <label class="form-check-label">
+                                           <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                                               Sólo amoblados
+                                         </label>
+                                       </div>
+                                </div>  
+                        </div>
+                        <div class="row">
+                                <div class="col-12">
+                                       <div class="form-check">
+                                         <label class="form-check-label">
+                                           <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                                               Sólo arriendo de temporada
+                                         </label>
+                                       </div>
+                                </div>  
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row justify-content-center">
+                                    <button type="button" class="btn btn-primary">Filtrar</button>
+                                </div>
+                            </div>  
+                        </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <footer class="row" id="piecera">
+            <div class="col-12">
+                <div class="footer">
+                        <h7> © 2019 Todos los derechos reservados. Prohibida su reproducción total o parcial por cualquier medio.</h7>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

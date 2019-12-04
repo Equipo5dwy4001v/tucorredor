@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Solicitud de Contraseña{% endblock %}
+
+{% block menu %}
+    </br>       
+{% endblock menu %}
+{% block content %}   
+      <form id="formulario" action="" method="POST" class="col-5">
+            {% csrf_token %}    
+               <div class="field_container"> 
+                        <div class="form-row">
+                            <div class="col-6">
+                             <label id="etiquetas" for="id_email">Correo:</label>
+                            </div>
+                            <div class="col-6">
+                                {{form.email}}
+                            </div>
+                        </div>                      
+                </div>
+            {% endfor %}
+            <br>
+            <div class="form-row justify-content-center">
+                  <button type="submit" class="btn btn-success" name="submit" >Enviar</button>
+            </div>   
+        </form>
+{% endblock content %}
+{% block  extrafooter %}
+    <br><br><br>
+{% endblock %}

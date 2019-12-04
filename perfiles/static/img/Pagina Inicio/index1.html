@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--..l..-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inmobiliaria</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="row justify-content-end" id="cabecera">
+            <div class="col-xs-12">
+                <div class="header" >
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link efecto-link" id="ingreso" data-toggle="modal"
+                            data-target="#ventana-ingreso"  href="#">Ingreso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link efecto-link" id="registro" data-toggle="modal"
+                            data-target="#ventana-registro" href="#" >Registo</a>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </header>
+         <!-- Buscador de propiedades -->
+        <main class="row" id="contenido">   
+            <div class="container justify-content-center">   
+                <div class="col-xs-12">
+                    <h1  id="titulo"   class="nav justify-content-center">Inmobiliaria</h1>
+                    <h3  id="subtitulo"class="nav justify-content-center">Casas - Departamentos</h3>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <input class="typeahead form-control" type="text" placeholder="Ingrese Comuna....">
+                    </div>
+                    <div class="col-xs-3 ">
+                        <button class="btn btn-primary form-control" type="submit" id="buscar">
+                            <i class="fas fa-search"></i> Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <br><br><br><br>
+        <!-- Footer inicio -->
+        <footer class="row" id="piecera">
+            <div class="col-xs-12">
+                <div class="footer">
+                    <h6> © 2019 Todos los derechos reservados. Prohibida su reproducción total o parcial por cualquier medio.</h6>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- formulario de ingreso -->
+    <div class="modal fade" id="ventana-ingreso" tabindex="-1" role="dialog" aria-labelledby="ventana-ingreso"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document" >
+            <div class="modal-content">
+                <div class="modal-header" >
+                        <h5 id="titulo-ingreso" >Usuario Registrado</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body" id="popup">
+                    <form action="">
+                        <div class="contenedor-input">
+                            <input type="email" placeholder="E-mail">
+                            <input type="password" placeholder="Contraseña">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Ingresar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="#">Olvidaste tu contraseña</a>     
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--formulario de registro -->
+    <div class="modal fade" id="ventana-registro" tabindex="-1" role="dialog" aria-labelledby="ventana-registro"
+         aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content">
+            <div class="modal-header" >
+                <h5 class="justify-content-center" id="titulo-registro" >Registro de Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" >
+                <form id="popup"> 
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Nombre</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Su Nombre...">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Direccion</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Av / Pje ... ">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Ciudad</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">Comuna</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>escoja...</option>
+                                <option>Puente alto</option>
+                                <option>La florida</option>
+                                <option>Macul</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Codigo</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+     <!-- Fin formulario de registro -->
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

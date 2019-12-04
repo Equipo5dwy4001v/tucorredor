@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Inicia Sesión{% endblock %}
+{% block  extrahead %}
+    <br>  
+{% endblock %}
+
+{% block content %}    
+      <form id="formulario" action="" method="POST" class="col-3">
+            {% csrf_token %}    
+            {% for field in form %}
+                <div class="field_container">
+                        <div class="form-row">   
+                            {{ field.errors }}     
+                        </div>   
+                        <div class="form-row">
+                            {{ field.label_tag }}                                
+                        </div>
+                        <div class="form-row justify-content-center"> 
+                            {{ field }} 
+                        </div>                    
+                </div>
+            {% endfor %}
+            
+            <br>
+            <div class="form-row justify-content-center">
+                  <button type="submit" class="btn btn-primary" name="submit" >Ingresar</button>
+            </div>   
+        </form>
+{% endblock %}
+{% block  extrafooter %}
+    <br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
+<!-- <form id="formulario" method="POST" >
+       {% csrf_token %}
+        <h4> Datos Contacto </h4>
+        <br>
+          <div class="form-row col-6">
+            <div class="contenedor-input col-6 ">
+                <div class="form-row col-6">
+                  <label for=""> {{ field.errors }} </label>
+                      <input type="text" placeholder="Nombre de Usuario" name="form.username">
+                </div>
+                <br>
+                <div class="form-row col-6">
+                      <input type="password" placeholder="Contraseña" name="form.password">  
+                </div>
+                <br>
+                <div class="form-row col-6">
+                    <button type="submit" class="btn btn-primary" name="submit">ingresar</button>
+                  </div> 
+            </div>
+          </div>
+    </form>
+<input class="btn btn-primary" type="submit" name="submit">
+-->

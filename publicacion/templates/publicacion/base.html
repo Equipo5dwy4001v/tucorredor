@@ -1,0 +1,36 @@
+{% load cloudinary %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TuCorredor : Galeria</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+
+<body>
+    <div id="header" class="row col-12 justify-content-end">
+           
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link efecto-link" id="salir" data-toggle="modal"
+                            data-target="#"  href="{% url 'bienvenida' %}"><i class="fas fa-sign-out-alt"></i>Salir </a> 
+                        </li> 
+                    </ul>
+    
+    </div>
+    <div id="sidebar-left"></div> 
+    <div id="main">
+        {% block content %} 
+        
+        {% endblock %}
+    </div>
+    <div id="sidebar-right"></div>
+    <div id="footer"></div>
+</body>
+
+</html>

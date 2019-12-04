@@ -1,0 +1,51 @@
+{% extends 'Base.html' %}
+
+{% block formulario %}
+<form method="POST" id="popup">
+    { csrf_token %}
+    <div class="row">
+            <div class="form-group col-md-6">
+                    <label for="inputName">Nombre</label>
+                    <input type="text" class="form-control" name="first_name" placeholder="Su Nombre...">  
+            </div>
+    </div>
+    <div class="row">
+            <div class="form-group col-md-6">
+                    <label for="inputCity">Apellido</label>
+                    <input type="text" class="form-control" name="last_name" placeholder="Su Apellido...">
+            </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Correo</label>
+            <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email">
+        </div>
+    </div>
+    <div class="row">
+            <div class="form-group col-md-6">
+                  <label>Nombre de Usuario</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de Usuario...">
+            </div>
+    </div>
+    <div class="row">
+            <div class="form-group col-md-6">
+                  <label for="inputPassword1">Contraseña</label>
+                  <input type="password" class="form-control" name="password1" id="inputPassword1" placeholder="Contraseña">
+            </div>
+    </div>
+    <div class="row">
+            <div class="form-group col-md-6">
+                  <label for="inputPassword2">Confirmar Contraseña</label>
+                  <input type="password" class="form-control" name="password2" id="inputPassword2" placeholder="Repita contraseña">
+            </div>
+    </div>
+    <div class="row">
+            <div class="form-group col-md-6">
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+    </div>
+</form>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+</div>
+{% endblock %}

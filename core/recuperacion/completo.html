@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Envio nueva Contraseña{% endblock %}
+
+{% block menu %}
+    </br>       
+{% endblock menu %}
+{% block content %} 
+
+    <h1> Su Contraseña se reestableció correctamente</h1>
+    <p> <a href="{% url 'sign_up' %}"> Iniciar Sesión</a></p>
+
+{% endblock content %}
+{% block  extrafooter %}
+    <br><br><br>
+{% endblock %}

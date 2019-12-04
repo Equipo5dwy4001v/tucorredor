@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    background-image: url("../img/interior.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+#etiquetas{
+   color:  white;
+   text-shadow: 2px 2px 2px black;
+ 
+
+}
+
+#etiquetas2{
+    color : black;
+    text-shadow: 2px 2px 2px white;
+ 
+ }
+#salir
+{
+   color: white;
+}
+
+#header {
+    background: rgba(0,0,255,0.3);
+    box-shadow: 2px 2px 10px #666;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+}
+
+#sidebar-left {
+    float: left;
+    width: 15%;
+   /* background-color:  rgba(0,0,255,0.3);*/
+}
+
+#main {
+    float: left;
+    width: 70%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#sidebar-right {
+    float: left;
+    width: 15%;
+   /* background-color: rgba(0,0,255,0.3);*/
+}
+
+#footer {
+    clear: both;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    /*background-color: lightblue;*/
+    background: rgba(0,0,255,0.3);
+}
+
+#sidebar-left,
+#main,
+#sidebar-right {
+    min-height: 600px
+}

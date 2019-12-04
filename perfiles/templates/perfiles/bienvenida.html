@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Bievenido{% endblock %}
+
+{% block menu %}
+
+{% if user.is_authenticated %}
+    <div class="col-12">
+        <div class="row justify-content-start" >
+            <h3>Hola {{ user.username }}</h3>
+        </div>
+        <div class="row justify-content-end" >
+            <a class="nav-link efecto-link" href="{% url 'sign_out' %}">Cerrar sesión</a>
+            <a class="nav-link efecto-link" href="{% url 'propietario_nuevo' %}">Nueva Propiedad</a> 
+            <a class="nav-link efecto-link" href="{% url 'cliente_nuevo' %}">Nuevo Cliente</a> 
+        </div>
+    </div>  
+{% else %}
+    <!--<a href="{% url 'sign_up' %}">Registrate</a>
+    <a href="{% url 'sign_in' %}">Iniciar sesión</a>-->
+    <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link efecto-link" href="{% url 'sign_up' %}">Registrate </a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link efecto-link" href="{% url 'sign_in' %}"> Iniciar Sesión</a>  
+            </li>
+         <!--   <li class="nav-item">
+                    <a class="nav-link efecto-link" href="{% url 'password_reset' %}"> Olvidaste tu contraseña</a>  
+            </li> -->
+    </ul>
+{% endif %}
+
+{% endblock menu %}
